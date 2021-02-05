@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            //send button pressed to display screen
+            function show(e){
+  //             alert(e);
+               let c=document.querySelector("#"+e).value;
+               let d=document.querySelector("#screen").value += c;
+            }
+
+            function solve(){
+               let value = document.getElementById("screen").value;
+            let answer = eval(value);
+            document.querySelector("#screen").value = answer;
+            }
+
+            function clears(){
+                let cleared=document.querySelector("#clearscreen").value;
+                let z=document.querySelector("#screen").value=cleared;            
+            }
+            
+            
+         </script>
+
+<h1 id="hi">Calculator</h1>
+
+<table>
+    <tr>
+        <td colspan="5">
+           <input type="text" id="screen">
+        </td>
+    </tr>
+    <tr>
+        <td>
+         <button id="b" onclick="show(this.id)" value="1">1</button>
+         </td>
+         <td>
+             <button id="c" onclick="show(this.id)" value="2">2</button>
+         </td>
+         <td>
+             <button id="d" onclick="show(this.id)" value="3">3</button>
+         </td>
+         <td>
+             <button id="clearscreen" onclick="clears()" value="">C</button>
+          </td>
+    </tr>
+    <tr>
+     <td>
+         <button id="e" onclick="show(this.id)" value="4">4</button>
+      </td>
+      <td>
+         <button id="f" onclick="show(this.id)" value="5">5</button>
+      </td>
+      <td>
+         <button id="g" onclick="show(this.id)" value="6">6</button>
+      </td>
+      <td>
+         <button id="equal" onclick="solve()" value="=">=</button>
+      </td>
+ </tr>
+ <tr>
+     <td>
+         <button id="h" onclick="show(this.id)" value="7">7</button>
+      </td>
+      <td>
+         <button id="i" onclick="show(this.id)" value="8">8</button>
+      </td>
+      <td>
+         <button id="j" onclick="show(this.id)" value="9">9</button>
+      </td>
+      <td>
+         <button id="divide" onclick="show(this.id)" value="/">/</button>
+      </td>
+      
+ </tr>
+ <tr>
+     <td>
+         <button id="a" onclick="show(this.id)" value="0">0</button>
+      </td>
+      <td>
+         <button id="sum" onclick="show(this.id)" value="+">+</button>
+      </td>
+      <td>
+         <button id="multiply" onclick="show(this.id)" value="*">*</button>
+      </td>
+      <td>
+         <button id="multiply" onclick="show(this.id)" value="-">-</button>
+      </td>
+ </tr>
+</table>
+
+    </body>
+</html>
